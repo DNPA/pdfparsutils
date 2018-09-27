@@ -1,0 +1,51 @@
+{
+	"name": "pdfparseutils",
+	"version": "0.6.5",
+	"description": "Utility library for breaking down the structure of a PDF report and exporting the decomposition data to an excell spreadsheet file",
+	"keywords": [
+		"pdf",
+		"excel",
+		"pdf utils",
+		"convert pdf to excel",
+		"decompose pdf reports",
+		"server side pdf utils"
+	],
+	"author": {
+		"name": "PDF-Tool Team",
+		"email": "pdftool@pirod.nl"
+	},
+	"maintainers": {
+        "name": "PDF-Tool Team",
+		"email": "pdftool@pirod.nl"
+	},
+	"engines": {
+        "node": ">=4.5"
+	},
+	"dependencies": {
+        "pdf2json": "git+ssh://git@github.com:modesty/pdf2json.git",
+		"xlsx-populate": ">=1.17.0"
+	},
+	  "devDependencies": {
+    },
+	"bundledDependencies": [
+        "pdf2json",
+        "xlsx-populate"
+    ],
+	"contributors": [],
+	"homepage": "http://github.com/DNPA/pdfparseutils",
+	"repository": {
+        "type": "git",
+		"url": "git@github.com:DNPA/pdfparseutils.git"
+	},
+	"licenses": [
+		{
+			"type": "BSD-2-Clause",
+			"url": "https://github.com/DNPA/pdfparseutils/blob/master/license.txt"
+		}
+	],
+	"bugs": {
+        "url": "http://github.com/DNPA/pdfparseutils/issues"
+    }
+}
+
+
