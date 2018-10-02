@@ -10,7 +10,7 @@ The library has the following functionality:
 * Exporting of lexiaclly scoped data structures to a flat Excell sheet.
 * Experimental support for template building hints.
 
-To install, use 'npm install pdfparseutils'
+To install, use 'npm install github:dnpa/pdfparseutils'
 
 #### Parsing the document and binding a template.
 Before we can get to the real work, we need to parse the PDF document and bind it to a template. 
