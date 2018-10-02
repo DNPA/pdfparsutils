@@ -22,7 +22,7 @@
         "node": ">=4.5"
 	},
 	"dependencies": {
-        "pdf2json": "https://github.com/modesty/pdf2json.git",
+        "pdf2json": "github:modesty/pdf2json",
 	"xlsx-populate": ">=1.17.0"
 	},
 	  "devDependencies": {
@@ -35,7 +35,7 @@
 	"homepage": "http://github.com/DNPA/pdfparseutils",
 	"repository": {
         "type": "git",
-		"url": "git@github.com:DNPA/pdfparseutils.git"
+		"url": "github:dnpa/pdfparseutils.git"
 	},
 	"licenses": [
 		{
