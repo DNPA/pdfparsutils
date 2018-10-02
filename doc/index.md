@@ -6,16 +6,16 @@ The goal is to enable most of the hooks needed to aid in extracting the, possibl
 
 ##  Install
 
-    npm install pdfparseutils
+    npm install github:dnpa/pdfparseutils
 
 
 Or install it globally:
 
-    sudo npm install pdfparseutils -g
+    sudo npm install github:dnpa/pdfparseutils -g
 
 To update with latest version:
 
-    sudo npm update pdfparseutils -g
+    sudo npm update github:dnpa/pdfparseutils -g
 
 ## Code Example
 
