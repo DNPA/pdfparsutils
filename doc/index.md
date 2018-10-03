@@ -1,28 +1,28 @@
-# pdfparseutils module
+# pdfparsutils module
 
-pdfparseutils is a node.js module that aids in processing PDF reports and in eventually converting them from binary PDF to excel spreadsheet format, it's built with pdf2json and xlsx-populate.
+pdfparsutils is a node.js module that aids in processing PDF reports and in eventually converting them from binary PDF to excel spreadsheet format, it's built with pdf2json and xlsx-populate.
 
 The goal is to enable most of the hooks needed to aid in extracting the, possibly nested, data structures from a PDF report and to allow exporting the results to an excell spreadsheet.
 
 ##  Install
 
-    npm install github:dnpa/pdfparseutils
+    npm install github:dnpa/pdfparsutils
 
 
 Or install it globally:
 
-    sudo npm install github:dnpa/pdfparseutils -g
+    sudo npm install github:dnpa/pdfparsutils -g
 
 To update with latest version:
 
-    sudo npm update github:dnpa/pdfparseutils -g
+    sudo npm update github:dnpa/pdfparsutils -g
 
 ## Code Example
 
 #### Using the modules and getting the top API's
 
 ```javascript
-  const utils = require('pdfparseutils');
+  const utils = require('pdfparsutils');
   const corelib_settings = {
       aggressive_regex : true,
       strip_attributes_first: true,

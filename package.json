@@ -1,6 +1,6 @@
 {
-	"name": "pdfparseutils",
-	"version": "0.6.6",
+	"name": "pdfparsutils",
+	"version": "0.6.7",
 	"description": "Utility library for breaking down the structure of a PDF report and exporting the decomposition data to an excell spreadsheet file",
 	"keywords": [
 		"pdf",
@@ -22,8 +22,8 @@
         "node": ">=4.5"
 	},
 	"dependencies": {
-        "pdf2json": "github:modesty/pdf2json",
-	"xlsx-populate": ">=1.17.0"
+        "pdf2json": ">=1.1.7",
+	    "xlsx-populate": ">=1.17.0"
 	},
 	  "devDependencies": {
     },
@@ -32,19 +32,19 @@
         "xlsx-populate"
     ],
 	"contributors": [],
-	"homepage": "http://github.com/DNPA/pdfparseutils",
+	"homepage": "http://github.com/DNPA/pdfparsutils",
 	"repository": {
         "type": "git",
-		"url": "github:dnpa/pdfparseutils.git"
+		"url": "http://github.com/DNPA/pdfparsutils.git"
 	},
 	"licenses": [
 		{
 			"type": "BSD-2-Clause",
-			"url": "https://github.com/DNPA/pdfparseutils/blob/master/license.txt"
+			"url": "https://github.com/DNPA/pdfparsutils/blob/master/license.txt"
 		}
 	],
 	"bugs": {
-        "url": "http://github.com/DNPA/pdfparseutils/issues"
+        "url": "http://github.com/DNPA/pdfparsutils/issues"
     }
 }
 

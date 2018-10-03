@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const fs = require('fs');
-const utils = require('pdfparseutils');
+const utils = require('pdfparsutils');
 
 (function (fs, utils, cons, json, process) {
     "use strict";

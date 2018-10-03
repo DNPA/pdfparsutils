@@ -1,4 +1,4 @@
-## pdfparseutils
+## pdfparsutils
 
 JavaScript utility library for breaking down the structure of a PDF report and exporting the decomposition data to an excell spreadsheet file.
 
@@ -10,14 +10,14 @@ The library has the following functionality:
 * Exporting of lexiaclly scoped data structures to a flat Excell sheet.
 * Experimental support for template building hints.
 
-To install, use 'npm install github:dnpa/pdfparseutils'
+To install, use 'npm install github:dnpa/pdfparsutils'
 
 #### Parsing the document and binding a template.
 Before we can get to the real work, we need to parse the PDF document and bind it to a template. 
 In the simplest form we will use a brand new template for our PDF document. To initialize part of our library we should need to read in a JSON file with regular expressions. There is a sample regex file in the repo, but it it sugested you as a user create your own domain specific regex file for your own purposes.
 ```javascript
-//Load the pdfparseutils module
-const utils = require('pdfparseutils');
+//Load the pdfparsutils module
+const utils = require('pdfparsutils');
 //Get a parser from the module so we can parse PDF content.
 const parser = utils.get_parser();
 //Set some config parameters for our module.
@@ -76,7 +76,7 @@ document_template_pair.init({
 
 #### About rasters
 
-The pdfparseutils library is built on top of [pdf2json](https://github.com/modesty/pdf2json) and is meant as a utility library to help in the semi-automated decomposition of report-type PDF documents. At the core of pdfparseutils is the concept of rasterization. Using a simple measure for the granularity with what to rasterize, the first step the library takes in aiding the decomposition of the document is converting the output of pdf2json to a two-dimentional matrix (or raster) of cells. Each cell, that may contain zero or more PDF elements, must be seen as a collection of elements that are aproximately at the same location in the grit. 
+The pdfparsutils library is built on top of [pdf2json](https://github.com/modesty/pdf2json) and is meant as a utility library to help in the semi-automated decomposition of report-type PDF documents. At the core of pdfparsutils is the concept of rasterization. Using a simple measure for the granularity with what to rasterize, the first step the library takes in aiding the decomposition of the document is converting the output of pdf2json to a two-dimentional matrix (or raster) of cells. Each cell, that may contain zero or more PDF elements, must be seen as a collection of elements that are aproximately at the same location in the grit. 
 
 ```javascript
 //After parsing, bind the new (or remembered) template to the parsed document.
@@ -116,7 +116,7 @@ if (pageone.child_count() > 1) {
 
 #### About templates
 So far we have shown a bit of the usage of template related functions without going into the template concept.
-A template for pdfparseutils is a tree. At the top level of the tree there is a collection of pageset templates. A pageset template as the name implies is a single template that should apply to a set of one or more pages. A pageset template in term should be seen as a root level node template. A node template, at root level or any other level can have one of three distinct types:
+A template for pdfparsutils is a tree. At the top level of the tree there is a collection of pageset templates. A pageset template as the name implies is a single template that should apply to a set of one or more pages. A pageset template in term should be seen as a root level node template. A node template, at root level or any other level can have one of three distinct types:
 
 * A leaf-node
 * A non-leaf non-repeating structure node
@@ -184,7 +184,7 @@ const datastructure = document_template_pair.apply();
 ```
 
 #### About lexical scopes
-To understand how the data from the leaf nodes maps to the apply results, we need to discuss lexical scoping and how it is implemented in pdfparseutils. The pdfparseutils library has two ways to scope data fields:
+To understand how the data from the leaf nodes maps to the apply results, we need to discuss lexical scoping and how it is implemented in pdfparsutils. The pdfparsutils library has two ways to scope data fields:
 
 * Page scope
 * Lexical scope
@@ -193,7 +193,7 @@ Page scope speaks for itself. These are variables that are bound to the specific
 
 * A child node of a non-leaf repeating structure node defines a lexical scope. 
 
-An important reason to keep pages outside of lexical scoping is the idea that in the future, pdfparseutils. might want to support recorsd that start on one page and continue on the next.
+An important reason to keep pages outside of lexical scoping is the idea that in the future, pdfparsutils. might want to support recorsd that start on one page and continue on the next.
 
 You can have repeating structures within repeating structures and the whole of these defines a tree of lexical scopes for variables. So a nested structure PDF page coulkd for example have the following lexical scopes:
 
@@ -207,7 +207,7 @@ You can have repeating structures within repeating structures and the whole of t
 Once apply has given us the lexically scoped data structure, what is left is smassing the whole tree and flattening things so they fit into our excel results sheet.
 
 ```javascript
-const xlsx =  pdfparseutils.get_xslxutil();
+const xlsx =  pdfparsutils.get_xslxutil();
 xlsx.export(datastructure, "./our-results.xlsx");
 ```
 The mapping from lexically scoped structures to a flat two dimensional excell sheet is a bit limited, but
