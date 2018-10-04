@@ -1,6 +1,6 @@
 {
 	"name": "pdfparsutils",
-	"version": "0.6.8",
+	"version": "0.6.9",
 	"description": "Utility library for breaking down the structure of a PDF report and exporting the decomposition data to an excell spreadsheet file",
 	"keywords": [
 		"pdf",
