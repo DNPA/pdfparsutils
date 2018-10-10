@@ -1,0 +1,25 @@
+{
+    "parser": "babel-eslint",
+     "extends": "crockford",
+     "rules" : {
+         "one-var" : 0,
+         "no-mixed-spaces-and-tabs" : 1,
+         "strict" : ["error", "function"],
+         "global-require": 1,
+         "prefer-const": 1,
+         "no-var" : 1
+     },
+     "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+     },
+     "env": {
+        "browser": false,
+        "amd": true,
+        "node": true,
+        "es6": true
+    }
+}

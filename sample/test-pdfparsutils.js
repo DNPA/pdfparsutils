@@ -9,11 +9,18 @@ const utils = require('pdfparsutils');
             const regexes = json.parse(regexConfBuffer);
             const re_len = regexes.length;
             //Read the PDF into a buffer
-            const pdffile = process.argv[2];
+            let pdffile = "";
             let pageno = 0;
             if (process.argv.length > 3) {
+				pdffile = process.argv[2];
                 pageno = parseInt(process.argv[3]);
-            }
+            } else {
+			   cons.log("Tool for testing currently highly experimental header/body/record/footer finding code");
+			   cons.log("Only use this tool if you are working on making that highly experimental code work!");
+			   cons.log();
+			   cons.log("Please supply PDF file and page number to test with");
+			   process.exit(1);
+			}
             fs.readFile(pdffile, function (err, pdfBuffer) {
 				if (!err) {
                     const guestimate_settings = { 
